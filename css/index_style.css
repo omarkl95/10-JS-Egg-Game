@@ -1,0 +1,169 @@
+html, body {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+#gameStart, #gameOver {
+    width: 50%;
+    background-color: #4C4660;
+    text-align: center;
+    border: 4px solid #FF4571;
+    border-radius: 70px;
+    margin: auto;
+    position: fixed;
+    top: 50vh;
+    transform: translate(50%, -50%);
+    z-index: 150;
+}
+#gameStart h1, #gameOver h1 {
+    color: #fff;
+    font-size: 64px;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    letter-spacing: -0.1em;
+    word-spacing: 10px;
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+#play, #playAgain:hover {
+    background-color: #ff5f84;
+}
+#play, #playAgain {
+    background-color: #FF4571;
+    border: 4px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    width: 200px;
+    height: 56px;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 44px;
+    text-decoration: none;
+    position: relative;
+    top: 28px;
+}
+#gameOver {
+    display: none;
+}
+#gameOver h2 {
+    color: #FFE345;
+    font-weight: 900;
+    font-size: 130px;
+    letter-spacing: -6px;
+    line-height: 110px;
+}
+#statusBar {
+    background-color: none;
+    color: rgba(255,255,255,0.8);
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#hen1 {
+    left: -3%;
+}
+.swing {
+    -webkit-animation-name: swing;
+    animation-name: swing;
+    animation: swing 1s infinite linear;
+}
+.hen {
+    width: 15%;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+.hen img {
+    width: 100%;
+}
+#hen2 {
+    left: 41%;
+}
+#hen3 {
+    left: 84%;
+}
+#egg1 {
+    left: 2%;
+}
+#egg2 {
+    left: 46%;
+}
+#egg3 {
+    left: 89%;
+}
+#brokenEgg1 {
+    left: 0%;
+}
+#brokenEgg2 {
+    left: 44%;
+}
+#brokenEgg3 {
+    left: 87%;
+}
+.brokenEgg {
+    width: 15%;
+    position: absolute;
+    bottom: 40px;
+    z-index: 10;
+    display: none;
+}
+.egg {
+    width: 5%;
+    position: absolute;
+    top: 40;
+    z-index: 8;
+}
+.egg img {
+    width: 100%;
+}
+#basket {
+    width: 85px;
+    height: 100px;
+    background: url(../images/Basket.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    z-index: 11;
+}
+#basketScore {
+    color: #FFE345;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 30px;
+    position: absolute;
+    top: 7;
+    left: 34;
+}
+#floor {
+    width: 100%;
+    height: 10%;
+    background-color: none;
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+}
+
+@keyframes swing{
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
